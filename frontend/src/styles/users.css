@@ -1,0 +1,295 @@
+/* Users Component Styles */
+.users-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 2rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+  }
+  
+  .users-main-content {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+  }
+  
+  .users-container h2 {
+    color: #1e293b;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    text-align: center;
+    border-bottom: 3px solid #667eea;
+    padding-bottom: 1rem;
+  }
+  
+  /* Table Container */
+  .table-container {
+    flex: 1;
+    min-width: 0;
+  }
+  
+  /* Table Styles */
+  .users-table {
+    width: 100%;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    overflow: hidden;
+    border-collapse: collapse;
+    margin-bottom: 0;
+  }
+  
+  .users-table thead {
+    background: #667eea;;
+  }
+  
+  .users-table thead th {
+    padding: 1.25rem 1rem;
+    text-align: left;
+    font-weight: 600;
+    color: white;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border: none;
+  }
+  
+  .users-table tbody tr {
+    border-bottom: 1px solid #e2e8f0;
+  }
+  
+  .users-table tbody tr:hover {
+    background-color: #f1f5f9;
+  }
+  
+  .users-table tbody tr:last-child {
+    border-bottom: none;
+  }
+  
+  .users-table tbody td {
+    padding: 1rem;
+    color: #475569;
+    font-size: 1rem;
+    font-weight: 500;
+    vertical-align: middle;
+  }
+  
+  .users-table tbody td:first-child {
+    font-weight: 600;
+    color: #334155;
+  }
+  
+  /* Delete Button */
+  .users-table button {
+    background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 0.875rem;
+    box-shadow: 0 2px 4px rgba(239, 68, 68, 0.2);
+  }
+  
+  .users-table button:hover {
+    background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+    box-shadow: 0 4px 8px rgba(239, 68, 68, 0.3);
+  }
+  
+  .users-table button:active {
+    transform: translateY(1px);
+  }
+  
+  /* Reassign Container */
+  .reassign-container {
+    flex: 0 0 400px;
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    border-left: 4px solid #f59e0b;
+    height: fit-content;
+    position: sticky;
+    top: 2rem;
+  }
+  
+  .reassign-container h3 {
+    color: #92400e;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .reassign-container h3::before {
+    content: "⚠️";
+    font-size: 1.25rem;
+  }
+  
+  /* Reassign Items */
+  .reassign-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background: #fef3c7;
+    border-radius: 8px;
+    border: 1px solid #fbbf24;
+  }
+  
+  .reassign-item span {
+    font-weight: 600;
+    color: #92400e;
+    flex: 1;
+  }
+  
+  .reassign-item select {
+    flex: 2;
+    padding: 0.75rem;
+    border: 2px solid #d1d5db;
+    border-radius: 6px;
+    background: white;
+    color: #374151;
+    font-size: 0.9rem;
+    cursor: pointer;
+    margin-left: 1rem;
+  }
+  
+  .reassign-item select:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+  }
+  
+  .reassign-item select option {
+    padding: 0.5rem;
+  }
+  
+  /* Confirm Button */
+  .reassign-container > button {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    color: white;
+    border: none;
+    padding: 0.875rem 2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1rem;
+    margin-top: 1rem;
+    width: 100%;
+    box-shadow: 0 4px 6px rgba(16, 185, 129, 0.2);
+  }
+  
+  .reassign-container > button:hover {
+    background: linear-gradient(135deg, #059669 0%, #047857 100%);
+    box-shadow: 0 6px 10px rgba(16, 185, 129, 0.3);
+  }
+  
+  .reassign-container > button:active {
+    transform: translateY(1px);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .users-main-content {
+      flex-direction: column;
+    }
+    
+    .reassign-container {
+      flex: none;
+      position: static;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .users-container {
+      padding: 1rem;
+    }
+    
+    .users-main-content {
+      gap: 1rem;
+    }
+    
+    .users-container h2 {
+      font-size: 1.5rem;
+    }
+    
+    .users-table {
+      font-size: 0.8rem;
+    }
+    
+    .users-table thead th,
+    .users-table tbody td {
+      padding: 0.75rem 0.5rem;
+    }
+    
+    .reassign-container {
+      flex: none;
+      padding: 1.5rem;
+    }
+    
+    .reassign-item {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0.75rem;
+    }
+    
+    .reassign-item select {
+      margin-left: 0;
+    }
+  }
+  
+  @media (max-width: 640px) {
+    .users-table {
+      display: block;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+    
+    .users-table thead,
+    .users-table tbody,
+    .users-table th,
+    .users-table td,
+    .users-table tr {
+      display: block;
+    }
+    
+    .users-table thead tr {
+      position: absolute;
+      top: -9999px;
+      left: -9999px;
+    }
+    
+    .users-table tr {
+      background: white;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+      padding: 1rem;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    }
+    
+    .users-table td {
+      border: none;
+      position: relative;
+      padding: 0.5rem 0 0.5rem 35%;
+      white-space: normal;
+      text-align: left;
+    }
+    
+    .users-table td:before {
+      content: attr(data-label) ": ";
+      position: absolute;
+      left: 0;
+      width: 30%;
+      padding-right: 10px;
+      white-space: nowrap;
+      font-weight: 600;
+      color: #374151;
+    }
+  }

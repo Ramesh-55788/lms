@@ -1,0 +1,377 @@
+/* Add User Form Styles */
+.add-user-form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.add-user-form h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 1rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.add-user-form h3:first-child {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.add-user-form h3::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+  border-radius: 2px;
+}
+
+.add-user-form h3:first-child::after {
+  width: 120px;
+  height: 4px;
+  bottom: -12px;
+}
+
+.add-user-form form {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  padding: 1.5rem;
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.1),
+    0 8px 16px rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.add-user-form form::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+  border-radius: 20px 20px 0 0;
+}
+
+.add-user-form input,
+.add-user-form select {
+  width: 100%;
+  padding: 1rem 1.25rem;
+  border: 2px solid #e9ecef;
+  border-radius: 12px;
+  font-size: 1rem;
+  background: #ffffff;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  outline: none;
+  color: #495057;
+  box-sizing: border-box;
+}
+
+.add-user-form input:focus,
+.add-user-form select:focus {
+  border-color: #667eea;
+  box-shadow: 
+    0 0 0 3px rgba(102, 126, 234, 0.1),
+    0 4px 12px rgba(102, 126, 234, 0.15);
+  transform: translateY(-2px);
+  background: #ffffff;
+}
+
+.add-user-form input:hover,
+.add-user-form select:hover {
+  border-color: #ced4da;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.add-user-form input::placeholder {
+  color: #6c757d;
+  opacity: 0.8;
+  font-weight: 400;
+}
+
+.add-user-form select {
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
+  background-position: right 1rem center;
+  background-repeat: no-repeat;
+  background-size: 1.5em 1.5em;
+  padding-right: 3rem;
+}
+
+.add-user-form select option {
+  padding: 1rem;
+  background: #ffffff;
+  color: #495057;
+}
+
+.add-user-form button {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+  position: relative;
+  overflow: hidden;
+  margin-top: 1rem;
+}
+
+.add-user-form button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+}
+
+.add-user-form button:active {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.add-user-form button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.2);
+}
+
+/* File Upload Specific Styles */
+.add-user-form input[type="file"] {
+  position: relative;
+  cursor: pointer;
+  padding: 1.5rem;
+  border: 2px dashed #ced4da;
+  border-radius: 12px;
+  background: linear-gradient(145deg, #f8f9fa 0%, #ffffff 100%);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.add-user-form input[type="file"]:hover {
+  border-color: #667eea;
+  background: linear-gradient(145deg, #f8f9ff 0%, #ffffff 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);
+}
+
+.add-user-form input[type="file"]:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+  outline: none;
+}
+
+.add-user-form input[type="file"]::file-selector-button {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-right: 1rem;
+  transition: all 0.3s ease;
+}
+
+.add-user-form input[type="file"]::file-selector-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+/* Success and Error Messages */
+.success-message,
+.error-message {
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 1.5rem;
+  animation: slideInUp 0.5s ease-out;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.success-message {
+  background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%);
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.error-message {
+  background: linear-gradient(135deg, #f8d7da 0%, #f5c6cb 100%);
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+/* Form Sections Distinction */
+.add-user-form form:nth-of-type(1) {
+  background: rgba(255, 255, 255, 0.95);
+}
+
+.add-user-form form:nth-of-type(2) {
+  background: linear-gradient(145deg, rgba(102, 126, 234, 0.05) 0%, rgba(255, 255, 255, 0.95) 100%);
+}
+
+.add-user-form form:nth-of-type(2)::before {
+  background: linear-gradient(90deg, #764ba2 0%, #667eea 100%);
+}
+
+/* Input Focus Ring Animation */
+@keyframes focusRing {
+  0% {
+    box-shadow: 0 0 0 0 rgba(102, 126, 234, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 6px rgba(102, 126, 234, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(102, 126, 234, 0);
+  }
+}
+
+.add-user-form input:focus,
+.add-user-form select:focus {
+  animation: focusRing 0.6s ease-out;
+}
+
+/* Button Ripple Effect */
+.add-user-form button::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transition: width 0.3s, height 0.3s, top 0.3s, left 0.3s;
+  transform: translate(-50%, -50%);
+}
+
+.add-user-form button:active::before {
+  width: 200px;
+  height: 200px;
+  top: 50%;
+  left: 50%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .add-user-form {
+    padding: 1rem;
+  }
+  
+  .add-user-form h3 {
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .add-user-form h3:first-child {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .add-user-form form {
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    border-radius: 16px;
+  }
+  
+  .add-user-form input,
+  .add-user-form select {
+    padding: 0.875rem 1rem;
+    font-size: 0.95rem;
+  }
+  
+  .add-user-form button {
+    padding: 0.875rem 1.5rem;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .add-user-form {
+    padding: 0.75rem;
+  }
+  
+  .add-user-form h3 {
+    font-size: 1.5rem;
+  }
+  
+  .add-user-form h3:first-child {
+    font-size: 1.75rem;
+  }
+  
+  .add-user-form form {
+    padding: 1.25rem;
+    gap: 1.25rem;
+  }
+  
+  .add-user-form input,
+  .add-user-form select {
+    padding: 0.75rem;
+    font-size: 0.9rem;
+  }
+  
+  .add-user-form button {
+    padding: 0.75rem 1.25rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Animation keyframes */
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Accessibility Enhancements */
+.add-user-form input:focus,
+.add-user-form select:focus,
+.add-user-form button:focus {
+  outline: 2px solid #667eea;
+  outline-offset: 2px;
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+  .add-user-form input,
+  .add-user-form select {
+    border-width: 3px;
+  }
+  
+  .add-user-form button {
+    border: 2px solid #2c3e50;
+  }
+}

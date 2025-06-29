@@ -1,0 +1,316 @@
+/* Leave History Container */
+.leave-history-container {
+  padding: 2rem;
+  border-radius: 20px;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.leave-history-container::before {
+  content: '';
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+  border-radius: 20px 20px 0 0;
+}
+
+/* Title Styling */
+.leave-history-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1e293b;
+  text-align: center;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.leave-history-title::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+  border-radius: 2px;
+}
+
+/* Table Styling */
+.leave-history-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+.leave-history-table thead {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.leave-history-table th {
+  padding: 1.25rem 1.5rem;
+  text-align: left;
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 0.95rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border: none;
+}
+
+.leave-history-table tbody tr {
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.leave-history-table tbody tr:hover {
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.leave-history-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.leave-history-table td {
+  padding: 1.25rem 1.5rem;
+  color: #374151;
+  font-weight: 500;
+  vertical-align: middle;
+  font-size: 0.95rem;
+}
+
+/* Action Button Styling */
+.view-button {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: white;
+  border: none;
+  padding: 0.625rem 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.view-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(16, 185, 129, 0.4);
+}
+
+.view-button:active {
+  transform: translateY(0);
+  transition: transform 0.1s;
+}
+
+/* Modal Styling */
+.modal-overlay {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom:10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.modal {
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  padding: 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+  max-width: 500px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  animation: slideInUp 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+  border-radius: 20px 20px 0 0;
+}
+
+.modal h4 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.modal p {
+  margin-bottom: 1rem;
+  color: #374151;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.modal p strong {
+  color: #1e293b;
+  font-weight: 600;
+  display: inline-block;
+  min-width: 100px;
+}
+
+/* Modal Button Styling */
+.cancel-button {
+  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-right: 1rem;
+  margin-top: 1.5rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.cancel-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(239, 68, 68, 0.4);
+}
+
+.close-button {
+  background: linear-gradient(135deg, #6b7280 0%, #4b5563 100%);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 1.5rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.close-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(107, 114, 128, 0.4);
+}
+
+/* Empty State */
+.leave-history-container p {
+  text-align: center;
+  color: #6b7280;
+  font-size: 1.1rem;
+  margin-top: 2rem;
+  font-style: italic;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .leave-history-container {
+    margin: 1rem;
+    padding: 1.5rem;
+  }
+  
+  .leave-history-table {
+    font-size: 0.875rem;
+  }
+  
+  .leave-history-table th,
+  .leave-history-table td {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .leave-history-container {
+    border-radius: 16px;
+    padding: 1.25rem;
+  }
+  
+  .leave-history-title {
+    font-size: 1.75rem;
+  }
+  
+  .leave-history-table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+    border-radius: 12px;
+  }
+  
+  .leave-history-table thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+  
+  .leave-history-table tr {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  }
+  
+  .leave-history-table td {
+    border: none;
+    position: relative;
+    padding: 0.75rem 0;
+    padding-left: 40%;
+    white-space: normal;
+  }
+  
+  .leave-history-table td:before {
+    content: attr(data-label) ": ";
+    position: absolute;
+    left: 0;
+    width: 35%;
+    font-weight: 600;
+    color: #374151;
+  }
+  
+  .modal {
+    margin: 1rem;
+    padding: 2rem;
+    border-radius: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .leave-history-container {
+    margin: 0.5rem;
+    padding: 1rem;
+  }
+  
+  .leave-history-title {
+    font-size: 1.5rem;
+  }
+  
+  .modal {
+    padding: 1.5rem;
+  }
+  
+  .cancel-button,
+  .close-button {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 0.5rem;
+  }
+}

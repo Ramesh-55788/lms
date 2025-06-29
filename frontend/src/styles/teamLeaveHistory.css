@@ -1,0 +1,71 @@
+.team-leave-history {
+    border-radius: 20px;
+    padding: 2rem;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .team-leave-history h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  
+  .member-section {
+    margin-bottom: 3rem;
+    padding: 1.5rem 2rem;
+    border: 1px solid #f0f0f0;
+    border-radius: 12px;
+    background: #fdfdfd;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+  }
+  
+  .member-section h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #34495e;
+    text-align: left;
+  }
+  
+  .team-leave-history table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  }
+  
+  .team-leave-history thead th {
+    background-color: #667eea;
+    color: white;
+    padding: 1rem;
+    text-align: left;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  .team-leave-history tbody tr:hover {
+    background: linear-gradient(135deg, #f8f9ff 0%, #ffffff 100%);
+  }
+  
+  .team-leave-history td {
+    padding: 1rem;
+    color: #616c7b;
+    font-weight: 600;
+    font-size: 0.95rem;
+    vertical-align: middle;
+  }
+  
+  .no-members, .no-history {
+    font-style: italic;
+    color: #999;
+    padding: 1rem 0;
+  }
+  

@@ -1,0 +1,37 @@
+/* Toast background colors */
+.Toastify__toast--success {
+    background: #198754;
+    color: #fff;
+  }
+  
+  .Toastify__toast--error {
+    background: #dc3545;
+    color: #fff;
+  }
+  
+  .Toastify__toast--warning {
+    background: #ffc107;
+    color: #000;
+  }
+  
+  .Toastify__toast--info {
+    background: #0dcaf0;
+    color: #000;
+  }
+  
+  /* Toast body */
+  .Toastify__toast-body {
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 15px;
+  }
+  
+  /* Close button */
+  .Toastify__close-button {
+    color: white;
+  }
+  
+  /* Progress bar */
+  .Toastify__progress-bar {
+    background: rgba(255, 255, 255, 0.7);
+  }
+  
